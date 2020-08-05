@@ -6,6 +6,7 @@
 
 server {
     listen  {{ $listen_port }};
+    proxy_protocol on;
     proxy_pass {{$.APP}}-{{ $upstream_port }};
 }
 
